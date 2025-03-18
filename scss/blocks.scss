@@ -460,6 +460,19 @@ a {
   }
 }
 
+.section3-form input {
+  color: $color-white !important;
+}
+
+.section3-form input:focus,
+.section3-form input:active {
+  color: $color-white !important;
+}
+
+.section3-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 @media (min-width: 600px) and (max-width: 1024px) {
   .bg-opacity {
     background: none;
@@ -1008,6 +1021,19 @@ a {
   }
 }
 
+.section3-form input {
+  color: $color-white !important;
+}
+
+.section3-form input:focus,
+.section3-form input:active {
+  color: $color-white !important;
+}
+
+.section3-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 @media (min-width: 320px) and (max-width: 599px) {
   header {
     background-image: url(../images/header-block.png);
@@ -1213,6 +1239,19 @@ a {
     color: $color-aurometalsaurus;
   }
 
+  .section3-form input {
+    color: $color-white !important;
+  }
+
+  .section3-form input:focus,
+  .section3-form input:active {
+    color: $color-white !important;
+  }
+
+  .section3-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
   .section3-block {
     padding: $p-10;
     display: flex;
@@ -1232,25 +1271,25 @@ a {
     max-width: 599px;
   }
 
-  .section3-form input button {
+  .section3-form input,
+  .section3-form button {
     width: 100%;
     max-width: 100%;
     height: 50px;
+    color: $color-white; // Всегда белый текст
   }
 
   .section3-form input {
     padding-left: 20px;
     border: none;
-    width: 100%;
     background: #ffffff0d;
     border-bottom: solid 2px $color-white;
     caret-color: $color-white;
     padding: 10px;
+    color: $color-white;
   }
 
   .section3-form button {
-    width: 100%;
-    max-width: 100%;
     font-size: $text-lg;
     background: #ffffff0d;
     border-bottom: solid 2px $color-white;
@@ -1262,33 +1301,14 @@ a {
   .section3-form input:focus {
     border: solid 2px $color-white;
     outline: none;
-  }
-
-  .section3-form input:focus {
     color: $color-white;
     caret-color: $color-white;
   }
 
-  .section3-form input::placeholder:last-child {
-    font-size: none;
+  .section3-form input::placeholder {
+    font-size: 16px;
     line-height: 39px;
-    color: none;
-  }
-
-  .section3-form input {
-    @include placeholder-style;
-  }
-
-  .section3-form input:focus::placeholder {
-    background: $color-white;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .section3-form input::placeholder:hover {
     color: $color-white;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .section3-form button:hover {

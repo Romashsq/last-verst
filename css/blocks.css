@@ -455,7 +455,19 @@ a {
   font-weight: 100;
   color: #637588;
 }
+.section3-form input {
+  color: white !important; /* Всегда белый текст */
+}
 
+.section3-form input:focus,
+.section3-form input:active,
+.section3-form input:not(:placeholder-shown) {
+  color: white !important;
+}
+
+.section3-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
 @media (min-width: 600px) and (max-width: 1024px) {
   .bg-opacity {
     background: none;
@@ -685,6 +697,17 @@ a {
     width: 236px;
     height: 425px;
   }
+
+  .section3-form input {
+    color: white !important; /* Всегда белый текст */
+  }
+
+  .section3-form input:focus,
+  .section3-form input:active,
+  .section3-form input:not(:placeholder-shown) {
+    color: white !important;
+  }
+
   .section3-form {
     display: flex;
     flex-direction: row;
@@ -1084,6 +1107,17 @@ a {
     width: 100%;
     max-width: 599px;
   }
+
+  .section3-form input {
+    color: white !important;
+  }
+
+  .section3-form input:focus,
+  .section3-form input:active,
+  .section3-form input:not(:placeholder-shown) {
+    color: white !important;
+  }
+
   .section3-form input button {
     width: 100%;
     max-width: 100%;
