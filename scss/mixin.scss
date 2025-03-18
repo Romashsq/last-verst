@@ -1,0 +1,87 @@
+@import './variables.scss';
+
+@mixin grid-child-styles($count) {
+    @for $i from 1 through $count {
+        div:nth-child(#{$i}) {
+            grid-column: 1 / 1;
+        }
+    }
+}
+
+@mixin bg-image($url) {
+    background-image: url(#{$url});
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+@mixin text-hover($size, $line-height, $weight, $color, $family, $hover-color) {
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $weight;
+    color: $color;
+    font-family: $family, sans-serif;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+@mixin placeholder-style {
+    &::placeholder {
+        font-family: $font-roboto;
+        font-size: $text-lg;
+        line-height: 39px;
+        background: $color-translucent-white;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $color-white;
+    }
+}
+
+@mixin background-cover($image-path) {
+    background-image: url($image-path);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin full-size {
+    height: 100%;
+    width: 100%;
+}
+
+@mixin text-style($color: $color-aurometalsaurus, $align: center, $line-height: 20px) {
+    text-align: $align;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin background-cover($image-path) {
+    background-image: url($image-path);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
